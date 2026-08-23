@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ghostmusicdownloader</title>
+  
+  <style> 
+      html body{
+        height:100%;
+        margin:0px;
+        padding-top:30px;
+        display: incline block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+  h1{
+    text-shadow: 5px 5px 5px grey; 
+    }
+  h1:hover{
+        box-shadow: 5px 0px 5px ;
+  }
+
+.box1{
+  width: 100%;
+  height: 35px;
+  background:#2D2E31;
+  border-radius:10px;
+  border:none;
+font-size:17px;
+  
+
+  animation: myslide 8s linear   infinite;
+}
+
+@keyframes myslide {
+  from {
+    transform: translateX(100vw);
+  }
+
+  to {
+    transform: translateX(-100vw);
+  }
+}
+
+   p{
+        text-align: center;
+      }
+      button{
+        padding: 10px;
+        font-size:15px;
+        border-radius: 5px;
+        border:none;
+        color: black;
+        background: grey;}
+    
+      
+      input{
+        width:250px;
+        height:46px;
+        font-size: 20px;
+        padding:10px;
+        margin-top: 10px;
+        border-radius: 10px;
+        border:none;
+      .search-box input{
+        width:350px;
+        height:46px;
+        font-size: 20px;
+        padding:left;
+        
+        border-radius: 10px;
+        border:none;
+        
+        
+      }
+    search-box.icon{
+      position: absolute;
+      right: 15px;
+      top:50%;
+      font-size: 20px;
+      pointer-events: none;
+      width:50px;
+    }
+.musicplayer{
+      background: darkred;
+      padding:20px;
+      border-radius:15px;
+      width:250;
+      box-shadow:0 0 20px;
+} 
+.img{
+  border:none;
+  border-radius: 0px;
+}
+  ""
+  
+      
+  </style>
+  
+<body style="height:100%; margin:0; background:linear-gradient(black, green)fixed ; color:white;ml style="height:100%; margin:0;>
+</head>
+<div class="box1"><h3>WELCOME TO GHOST MUSIC👻 
+</h3></div>
+
+  <h1 style="text-align: center;">👻Ghost Music Downloader </h1>
+  <p><b>Get exclusive music and your favourite genre.</b>😜</p>
+   <div style="text-align: center;">
+   <label for="search"><i>Find Ghost Music</i></label>
+   <br>
+   </div>
+   <div class="search box">
+     
+   <input type="text" id="search" placeholder="Type artist or song"><span class="icon">🔍</span>
+     <div id="results"></div>
+
+
+  
+  <script>
+  const songs = [
+    { title: "Gold digger",
+     artist: "Stallar",
+     file:"stallar-goldigger.mp3"},
+    { title:"iGhost",
+     artist:"Stallar ft Brodyboy",
+     file:"stallar-ft-brodyboy-iGhost.mp3"},
+    { title:"Uvalo", artist: "simamane ft Sijava",
+    file:"Usimamane-&-Sjava - Uvalo-Official-Audio.mp3"
+    },
+    { title:"Boom Bap",
+    artist:"Jack",
+    file:"Boom-Bap.mp3" 
+    }
+  ];
+
+  document.getElementById('search').addEventListener('keyup', function() {
+    let query = this.value.toLowerCase();
+    let resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = "";
+    if(query === "") return;
+
+    songs.forEach(song => {
+      if(song.title.toLowerCase().includes(query) || song.artist.toLowerCase().includes(query)) {// display 2
+        resultsDiv.innerHTML += `<a href="${song.file}" download  style=" display: block;padding:8px; color:grey;">${song.title}-${song.artist}</a>`;
+      }
+    });
+  });
+  </script>
+   <br><br>
+   
+   
+   <div class="terms">
+  <h4>Terms & Conditions</h4>
+  <p><i>
+    By using Ghost Music Downloader, you agree to use this service for personal, 
+    non-commercial purposes only. All songs and music files belong to their respective 
+    owners and artists. GMD does not host any music files. We are not responsible for 
+    how users use downloaded content. Please respect copyright laws and support your 
+    favorite artists by purchasing music or streaming legally. Use this tool at your own risk.</i>
+  </p>
+  <p><em> Ghost Music Downloaderis a student project created for learning purposes.We reserve the right to update these terms at anytime</em></p>
+  
+  
+
+</div>
+<br><br>
+
+   
+   
+   
+   <div class="musicplayer"><p class="songname"><b>stallar-gold-digger.mp3</b></p><audio id="myaudio">
+  <source src=" stallar-gold-digger.mp3"type="audio/mpeg">
+   </audio>
+   <div class="buttons">
+     
+   <button onclick="document.getElementById('myaudio') . play()">▶️play</button>
+   <button onclick="document.getElementById('myaudio') .pause()"> ⏸️ pause</button>
+   
+  
+     <button onclick="window.alert("Downloading stallar-goldigger.mp3")"><a href="stallar-goldigger.mp3"download style="color: black;"onclick="window.alert('Downloading stallar-goldigger.mp3')">Download</a></button>
+     
+     <br> <br><br>
+    <div class="song2"><p class="songname"><b>Stallar ft Brodyboy iGhost.mp3</b></p>
+    <audio id="song2">
+      <source src="stallar ft brodyboy iGhost.mp3" type ="audio/mpeg">
+    </audio>
+    <button onclick="document.getElementById('song2').play()">▶️ play</button>
+    
+    <button onclick="document.getElementById('song2'). pause ()"> ⏸️ pause </button>
+     <button onclick="window.alert("Downloading stallar ft brodyboy iGhost.mp3")"><a href="stallar ft brodyboy iGhost.mp3"download style="color: black";onclick="window.alert('Downloading stallar ft brodyboy iGhost.mp3')">Download</a></button>
+</div>
+<br> <br>
+<div class="song3"><p class="songname"><b>Usimamane & Sjava - Uvalo.mp3</b  ></p>
+<audio id="song3">
+  <source src="Usimamane & Sjava - Uvalo Official Audio.mp3" type="audio/mpeg">
+</audio>
+<button onclick="document.getElementById('song3').play()">▶️ play</button>
+<button onclick="document.getElementById('song3'). pause ()">⏸️ pause </button>
+<button onclick="window.alert('Downloading Usimamane & Sjava - Uvalo Official Audio.mp3')"><a href="Usimamane & Sjava - Uvalo Official Audio.mp3"download style ="color: black;"onclick="window.alert('Downloading Usimamane & Sjava - Uvalo Official Audio.mp3')">Download</a></button>
+<br> <br>
+<div class="song4"><p class="songname"><b>Boom-bap</b></p>
+<audio id="song4">
+  <source src="Boom-Bap.mp3" type="audio/mpeg">
+</audio>
+<button onclick="document.getElementById('song4').play()">▶️ play</button>
+<button onclick="document.getElementById('song4').pause ()">⏸️ pause</button>
+<button onclick="window.alert(' Downloading Boom-Bap.mp3')"><a href="Boom-Bap.mp3"download style"color:black;" onclick="window.alert('Downloading Boom-Bap.mp3')"></a>Download</button>
+
+  
+</div>
+
+</div>
+  </div>
+  </div>
+  
+<script>
+  console.log("Ghost Music loaded");
+  console.log('Ghost for life');
+
+</script>
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</body>
+
+
+</html>
